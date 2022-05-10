@@ -1,0 +1,18 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+1.168.192.in-addr.arpa.	IN	SOA	dns.martinloprod.net. root.martinloprod.net. (
+			      4		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+1.168.192.in-addr.arpa.	IN	NS	dns.martinloprod.net.
+1.168.192.in-addr.arpa	IN	NS	slave.martinloprod.net.
+20     IN      PTR     dns.martinloprod.net.
+21     IN      PTR     slave.martinloprod.net.
+50     IN      PTR     pc.martinloprod.net.
+1       IN      PTR     router.martinloprod.net.
+2       IN      PTR     router2.martinloprod.net.
