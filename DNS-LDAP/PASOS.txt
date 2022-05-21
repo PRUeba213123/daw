@@ -12,5 +12,9 @@ copiar el archivo /etc/bind/db.local por db.nombrepagina.web con sudo cp
 
 editamos el archivo renombrado
 
+se comprueba q el dns funcione haciendo named-checkzone nombrepagina.web /etc/bind/db.nombrepagina.web
+
+editamos /etc/bind/named.conf.default-zones
+
 
 
