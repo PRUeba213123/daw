@@ -1,2 +1,16 @@
+crear RED NAT en VM
 
 etc/netplan/01-network-manager-all.yaml para editar ip estatica
+
+sudo apt install dnsutils comprobamos q funciona con nslookup cifpponferrada.es / dig -x ip
+
+sudo apt install bind9 -y y systemctl status
+
+configurar /etc/bind/named.conf.options EDITAR FORWARDERS AÑADIR 8.8.8.8 Y 8.8.4.4 debajo de la llave escribir forward only;
+
+copiar el archivo /etc/bind/db.local por db.nombrepagina.web con sudo cp 
+
+editamos el archivo renombrado
+
+
+
