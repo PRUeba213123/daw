@@ -16,5 +16,12 @@ se comprueba q el dns funcione haciendo named-checkzone nombrepagina.web /etc/bi
 
 editamos /etc/bind/named.conf.default-zones
 
+systemctl restart bind9
 
+PARA RESOLUCION INVERSA
 
+En /etc/bind/named.conf.default-zones añadir la parte de la captura zone "20.1.168.192.in-addr.arpa"
+
+copiar /etc/bind/db.127 por /etc/bind/db.192 o db.172
+
+configurarlo como lo de la imagen
