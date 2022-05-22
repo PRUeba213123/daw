@@ -1,0 +1,26 @@
+
+ip estatica nameservers addresses 127.0.0.1
+
+apt-get install proftpd -y
+
+hay que sacar el id de usuario ftp con id ftp
+
+mkdir /var/ftp y dentro de ftp las carpetas correspondientes
+
+hacer chown ftp las carpetas dentro de ftp y chmod 777 a esas carpetas
+
+nano /etc/proftpd/proftpd.conf
+
+editar /etc/hosts y /etc/shells
+
+sudo ftpasswd --passwd --name mlr --file /etc/passwd.usuarios --uid 128 --home /var/ftp/intranet-mlr --shell /bin/false
+
+asegurar de que el nuevo usuario en este caso mlr tenga la misma id que ftp 
+
+editar /etc/proftpd/virtuals.conf
+
+sudo /etc/init.d/proftpd restart
+
+apt-get install filezilla
+
+editar host
