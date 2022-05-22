@@ -17,4 +17,6 @@ systemctl reload y status apache2
 
 con sudo apache2ctl configtest se puede comprobar si todo funciona
 
-editamos /etc/apache2/ports.conf
+editamos /etc/apache2/ports.conf y systemctl restart
+
+
