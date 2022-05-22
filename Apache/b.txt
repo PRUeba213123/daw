@@ -1,1 +1,14 @@
 
+apt install apache2
+
+ufw allow 'Apache' y OpenSSH
+
+crear carpeta /var/www/dominio
+
+sudo chown -R $USER:$USER /var/www/dominio
+
+sudo chmod -R 755 /var/www/dominio
+
+creamos un archivo en /etc/apache2/sites-available/dominio.conf
+
+a2ensite dominio.conf
