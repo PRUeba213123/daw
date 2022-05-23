@@ -1,0 +1,24 @@
+
+sudo apt install -y tomcat9 tomcat9-admin
+
+systemctl status para comprobar que se instalo bien
+
+para que pase el firewall: sudo uwf allow 8080/tcp
+
+para cambiar el puerto : /etc/tomcat9/server.xml y systemctl restart
+
+para editar usuarios /etc/tomcat9/tomcat-users.xml y añadimos al final esto 
+
+<user username="admin" password="1234" roles="admin-gui,manager-gui"/>
+</tomcat-users>
+
+luego en /usr/share/tomcat9-admin/manager/META-INF/context.xml comentamos lo siguiente
+
+<!--
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+-->
+
+restart
+
+desplegar en /manager el archivo war
