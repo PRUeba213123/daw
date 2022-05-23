@@ -1,8 +1,6 @@
 
 apt install apache2
 
-ufw allow 'Apache' y OpenSSH
-
 crear carpeta /var/www/dominio
 
 sudo chown -R $USER:$USER /var/www/dominio
