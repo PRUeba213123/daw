@@ -19,4 +19,18 @@ con sudo apache2ctl configtest se puede comprobar si todo funciona
 
 editamos /etc/apache2/ports.conf y systemctl restart
 
+atencion hay que comprobar que en /etc/apache2/sites-available/mime.conf exista la linea 
+TypesConfig /etc/mime.types y dentro de ese archivo este el formato de video /mp4
+
+Para crear un directorio de acceso limitado: dentro de /var/www/carpeta_localizaciones/delimitado se crea .htaccess y se le escribe lo siguiente
+
+Order deny,allow
+AuthUserFile "/home/martin/.htpasswd"
+AuthName "Identificate"
+AuthType Basic
+Require valid-user
+
+dentro de /etc/apache2/nombre_carpeta creamos el archivo roles editamos y añadimos admin: admins
+
+y con el comando  sudo htpasswd -c /home/martin/.htpasswd nombre_usuario añadimos los usuarios
 
