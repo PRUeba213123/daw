@@ -32,3 +32,4 @@ dentro de /etc/apache2/nombre_carpeta creamos el archivo roles editamos y añadi
 
 y con el comando  sudo htpasswd -c /home/martin/.htpasswd nombre_usuario añadimos los usuarios
 
+por ultimo a2enmod authz_groupfile , reload y restart de apache2
